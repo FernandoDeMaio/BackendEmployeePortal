@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        html {
+            zoom: 0.80;
+        }
+
+        .a4 {
+            height: 290mm;
+            width: 210mm;
+        }
+
+        body {
+            text-align: justify;
+            font-size: 11px;
+            font-family: sans-serif;
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-top: 50px;
+            height: 290mm;
+        }
+
+        h4 {
+            text-align: left;
+        }
+
+        p {
+            line-height: 20px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        footer {
+            position: fixed;
+            left: 0px;
+            bottom: 0px;
+            height: 30px;
+            width: 100%;
+            margin-left: 50px;
+        }
+
+        ul {
+            text-align:left;
+            margin-left: -20px;
+            list-style: none;
+        }
+
+        li {
+           
+            margin-left: -20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a4">
+        <div style="text-align: center;"><img style="width:100%;" src="{{logo}}"></div><br><br>
+        <p style="text-align: right"> {{FechaCarta}}</p><br><br>
+        <div>
+            <p>A quien corresponda -</p>
+            <p>Presente. -</p>
+        </div><br>
+        <div style="height: 35%;">
+            <p>Por este medio, hacemos constar que {{NombreSocio}}, con número de afiliación al IMSS {{Imss}} se
+                encuentralaborando en {{Empresa}}, desde {{FechaIngreso}} a la fecha.</p><br>
+            <div style="width:49%; display: inline-block;">
+                <h5 style="text-align:center">DATOS DEL COLABORADOR</h5>
+                <table style="width:90%; text-align: left;">
+                    <tr>
+                        <td style="width:60%;">CURP</td>
+                        <td>{{Curp}}</td>
+                    </tr>
+                    <tr>
+                        <td>Puesto</td>
+                        <td>{{Puesto}}</td>
+                    </tr>
+                    <tr>
+                        <td>Salario diario</td>
+                        <td>{{SalarioDiario}}</td>
+                    </tr>
+                    <tr>
+                        <td>Salario diario integrado</td>
+                        <td>{{SalarioDiarioMensual}}</td>
+                    </tr>
+                    <tr>
+                        <td>Domicilio donde se labora</td>
+                        <td>General Anaya #601 Pte. Col. Bella Vista Monterrey, N.L. C.P 64410</td>
+                    </tr>
+                </table>
+            </div>
+            <div style="width:49%; display: inline-block;">
+                <h5 style="text-align:center">DATOS DE LA EMPRESA</h5>
+                <table style="width:90%; ">
+                    <tr>
+                        <td style="width:55%;">Nombre de la empresa</td>
+                        <td>FEMSA SERVICIOS, S.A DE C.V</td>
+                    </tr>
+                    <tr>
+                        <td>Domicilio Fiscal</td>
+                        <td>General Anaya #601 Pte. Col. Bella Vista Monterrey, N.L. C.P 64410</td>
+                    </tr>
+                    <tr>
+                        <td>Registro Patronal</td>
+                        <td>D50-16194171</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Atentamente,</p><img style="width:200px;" src="{{firma}}">
+        <ul>
+            <li>{{aclaracionFirma}}</li>
+            <li>{{areaEmpresa}}</li>
+            <li>{{datosContacto}}</li>
+        </ul>
+    </footer>
+    </div>
+</body>
+
+</html>
