@@ -1,7 +1,7 @@
-import { DataTypes } from "sequelize";
-import { sequelize } from "../database/database.js";
+const { DataTypes } = require("sequelize");
+const{ sequelize } = require("../database/database.js");
 
-export const Gender = sequelize.define("gender", {
+exports.Gender = sequelize.define("gender", {
   idGender: {
     type: DataTypes.INTEGER,
     primaryKey: true,

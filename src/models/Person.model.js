@@ -1,8 +1,8 @@
-import { DataTypes } from "sequelize";
-import { sequelize } from "../database/database.js";
-import { Gender } from "./Masters.model.js";
+const { DataTypes } = require("sequelize");
+const { sequelize } = require("../database/database.js");
+const { Gender }= require("./Masters.model.js");
 
-export const Person = sequelize.define("persons", {
+ const Person = sequelize.define("persons", {
   idPerson: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -14,11 +14,11 @@ export const Person = sequelize.define("persons", {
   secondName: {
     type: DataTypes.STRING,
   },
-  maternalLastName: {
+  surname: {
     type: DataTypes.STRING,
   },
   dateOfBirth: {
-    type: DataTypes.STRING,
+    type: DataTypes.DATE,
   },
   age: {
     type: DataTypes.STRING,
@@ -29,6 +29,8 @@ Person.belongsTo(Gender,
     {
         foreignKey: {
             name: 'idGender',
-            allowNull: false
+            allowNull: true
         }
 })
+
+module.exports = Person

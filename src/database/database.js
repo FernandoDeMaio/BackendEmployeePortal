@@ -1,6 +1,6 @@
-import Sequelize from "sequelize";
+const Sequelize = require ("sequelize");
 
-export const sequelize = new Sequelize(
+exports.sequelize = new Sequelize(
   "EmployeeCentralDB",
   "postgres",
   "admin",
